@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Population Api</title>
+</head>
+<body>
+    <h1>Welcome to Population Api Home page! </h1>
+    <h2>Apis:</h2>
+    <h3>getcountries: returns list of country codes</h3>
+    <a href="http://localhost:8000/population/getcountries/">http://localhost:8000/population/getcountries/</a>
+    <h3>getpopulation: returns prediction for specific couuntry</h3>
+    <a href="http://localhost:8000/population/getpopulation/?code=USA&year=2025">http://localhost:8000/population/getpopulation/?code=USA&year=2025</a>
+    <h3>getpopulation: returns prediction for top countries with paging</h3>
+    <a href="http://localhost:8000/population/getlargestcountries/?year=2025">http://localhost:8000/population/getlargestcountries/?year=2025</a><br/>
+    <a href="http://localhost:8000/population/getlargestcountries/?year=2025&page=2">http://localhost:8000/population/getlargestcountries/?year=2025&page=2</a><br />
+    <a href="http://localhost:8000/population/getlargestcountries/?year=2025&page=2&perpage=10">http://localhost:8000/population/getlargestcountries/?year=2025&page=2&perpage=10</a><br />
+</body>
+</html>
