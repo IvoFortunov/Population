@@ -3,6 +3,11 @@ numYears = 5
 num_e = 2.718281828459045
 useCompoundInterest=True
 
+url_pop_country = 'https://api.worldbank.org/v2/country/{}/indicator/SP.POP.TOTL?date={}&format=json'
+url_pop_grow = 'https://api.worldbank.org/v2/country/ALL/indicator/SP.POP.TOTL;SP.POP.GROW?source=2&date={}&format=json&per_page=1000'
+url_grow_country = 'https://api.worldbank.org/v2/country/{}/indicator/SP.POP.GROW?date={}&format=json'
+url_grow = 'https://api.worldbank.org/v2/country/ALL/indicator/SP.POP.GROW?date={}&format=json&per_page=1000'
+
 countryCodes={
     "AFG": "Afghanistan",
     "ALB": "Albania",
