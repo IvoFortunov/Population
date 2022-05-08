@@ -45,7 +45,7 @@ class populationData(object):
                 "countryName" : self.countryName,
                 "startPopulation" : self.population,
                 "targetYear" : self.targetYear,
-                "growth" : round(self.growth,3),
+                "growthPercent" : round(self.growth,3),
                 "predictedPopultaion" : self.predictedPopulation
                 
                  #"growths" : self.growths
