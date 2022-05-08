@@ -1,5 +1,7 @@
 baseYear = 2020
 numYears = 5
+num_e = 2.718281828459045
+useCompoundInterest=True
 
 countryCodes={
     "AFG": "Afghanistan",
