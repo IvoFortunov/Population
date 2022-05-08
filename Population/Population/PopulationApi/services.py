@@ -6,7 +6,7 @@ from .models import populationData
 
 def getPopulationForCountry(code, year):
     #Get population for base year
-    url = 'https://api.worldbank.org/v2/country/{}/indicator/SP.POP.TOTL?date={}&format=json'.format(code,year)
+    url = config.url_pop_country.format(code,year)
     print (url)
     r = requests.get(url)
     js =r.json()
@@ -29,7 +29,7 @@ def getPopulationForCountry(code, year):
     
     #Get growths for several years back
     for y in range(config.baseYear-config.numYears+1, config.baseYear+1):
-         url = 'https://api.worldbank.org/v2/country/{}/indicator/SP.POP.GROW?date={}&format=json'.format(code,y)
+         url = config.url_grow_country.format(code,y)
          print (url)
          r = requests.get(url)
          js =r.json()
@@ -41,7 +41,7 @@ def getPopulationForCountry(code, year):
 
 def getPopulations(year):
     #Get population for base year
-    url = 'https://api.worldbank.org/v2/country/ALL/indicator/SP.POP.TOTL;SP.POP.GROW?source=2&date={}&format=json&per_page=1000'.format(year)
+    url = config.url_pop_grow.format(year)
     print (url)
     r = requests.get(url)
     js =r.json()
@@ -79,7 +79,7 @@ def getPopulations(year):
             
     #Get growths for several years back
     for y in range(config.baseYear-config.numYears+1, config.baseYear+1):
-        url = 'https://api.worldbank.org/v2/country/ALL/indicator/SP.POP.GROW?date={}&format=json&per_page=1000'.format(y)
+        url = config.url_grow.format(y)
         print (url)
         r = requests.get(url)
         js =r.json()
