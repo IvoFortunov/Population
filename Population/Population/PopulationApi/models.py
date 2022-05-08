@@ -25,7 +25,7 @@ class populationData(object):
         else:
             self.growth=0
            
-        #Calculate population according to compound intrerest or exponentiam model
+        #Calculate population according to compound intrerest or exponential model
         if config.useCompoundInterest:    
             percentGrowth = (1+self.growth/100.0)**years
             self.predictedPopulation =int(self.population*percentGrowth)
@@ -45,7 +45,7 @@ class populationData(object):
                 "countryName" : self.countryName,
                 "startPopulation" : self.population,
                 "targetYear" : self.targetYear,
-                "growth" : self.growth,
+                "growth" : round(self.growth,3),
                 "predictedPopultaion" : self.predictedPopulation
                 
                  #"growths" : self.growths

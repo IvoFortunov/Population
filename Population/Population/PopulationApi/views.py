@@ -11,6 +11,7 @@ from rest_framework import status
 @api_view(['GET'])
 def countryList(request):
     countries= getCountryList()
+    [print(key,':',value) for key, value in countries.items()]
     return Response(countries, status.HTTP_200_OK)
 
 
@@ -35,7 +36,9 @@ def getPopulationByCountry(request):
     
     pd.predict(year)
      
-    return Response(pd.toDic(),status.HTTP_200_OK)
+    res = pd.toDic()
+    print(res)
+    return Response(res,status.HTTP_200_OK)
 
 
 @api_view(['GET'])
@@ -68,8 +71,9 @@ def getPopulationByYear(request):
         pd.predict(year)
         countries.append(pd.toDic())
     countries.sort(key = lambda row: row['predictedPopultaion'],reverse=True)
-
-    return Response(countries[(page-1)*perpage:page*perpage],status.HTTP_200_OK)
+    res = countries[(page-1)*perpage:page*perpage]
+    print(*res, sep='\n')
+    return Response(res,status.HTTP_200_OK)
 
 
 def index(request):
