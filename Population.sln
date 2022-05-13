@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.32407.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Population", "Population\Population.pyproj", "{2B7C68F8-D3D8-45B7-92BB-961D668DE0BD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FEECD23A-0F0F-4D68-B01A-1019F9A26D85}"
+	ProjectSection(SolutionItems) = preProject
+		Population\requirements.txt = Population\requirements.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
