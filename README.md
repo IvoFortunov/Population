@@ -6,6 +6,7 @@ World population prediction
 - Calculates predicted popultion using compound interrest or exponetional growth models
 - Exposes predicted population through api
 - Exposes data for top 20 countries ordered by predicted population for a given future year
+- Supports caching
 
 ### Platforms
-Python 3.10 and Django 2.2.28
+Python 3.10 and Django 4.0.4
