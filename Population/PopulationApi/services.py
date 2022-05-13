@@ -3,8 +3,14 @@ import requests
 from Population import config
 from .models import populationData
 
+cacheByContry={}
+cacheAll={}
 
 def getPopulationForCountry(code, year):
+
+    if code in cacheByContry:
+        return cacheByContry[code]
+
     #Get population for base year
     url = config.url_pop_country.format(code,year)
     print (url)
@@ -36,10 +42,14 @@ def getPopulationForCountry(code, year):
          list_data =js[1]
          if list_data[0].get('indicator').get('id') == 'SP.POP.GROW':
             pd.growths.append(float(list_data[0].get('value')))
+    
+    cacheByContry[code]=pd
     return pd
 
 
 def getPopulations(year):
+    if 'All' in cacheAll:
+        return cacheAll['All']
     #Get population for base year
     url = config.url_pop_grow.format(year)
     print (url)
@@ -49,6 +59,7 @@ def getPopulations(year):
     #if page==0 means no data
     if js[0].get('page')==0:
         return None
+    
 
     list_data =js[1]   
 
@@ -96,7 +107,8 @@ def getPopulations(year):
                 if not val == None:
                     pDatas[countryCode].growths.append(float(val))
              
-     
+    cacheAll['All'] = pDatas
+
     return pDatas
 
 def getCountryList():

@@ -7,6 +7,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 
+
 # Create your views here.
 @api_view(['GET'])
 def countryList(request):
@@ -28,6 +29,8 @@ def getPopulationByCountry(request):
 
     if not code in config.countryCodes:
         return Response("Bad country code", status.HTTP_400_BAD_REQUEST)
+
+
 
     pd = getPopulationForCountry(code,str(config.baseYear))
 

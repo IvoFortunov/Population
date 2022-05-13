@@ -31,12 +31,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="manage.py" />
+    <Compile Include="PopulationApi\admin.py" />
+    <Compile Include="PopulationApi\apps.py" />
+    <Compile Include="PopulationApi\migrations\0001_initial.py" />
+    <Compile Include="PopulationApi\migrations\__init__.py" />
+    <Compile Include="PopulationApi\models.py" />
+    <Compile Include="PopulationApi\services.py" />
+    <Compile Include="PopulationApi\tests.py" />
+    <Compile Include="PopulationApi\views.py" />
+    <Compile Include="PopulationApi\__init__.py" />
     <Compile Include="Population\config.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Population\PopulationApi\admin.py" />
     <Compile Include="Population\PopulationApi\apps.py" />
-    <Compile Include="Population\PopulationApi\migrations\__init__.py" />
     <Compile Include="Population\PopulationApi\models.py" />
     <Compile Include="Population\PopulationApi\services.py">
       <SubType>Code</SubType>
@@ -50,10 +58,26 @@
     <Compile Include="Population\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PopulationApi\migrations\__pycache__\0001_initial.cpython-310.pyc" />
+    <Content Include="PopulationApi\migrations\__pycache__\__init__.cpython-310.pyc" />
+    <Content Include="PopulationApi\templates\index.html" />
+    <Content Include="PopulationApi\__pycache__\admin.cpython-310.pyc" />
+    <Content Include="PopulationApi\__pycache__\apps.cpython-310.pyc" />
+    <Content Include="PopulationApi\__pycache__\countryCodes.cpython-310.pyc" />
+    <Content Include="PopulationApi\__pycache__\models.cpython-310.pyc" />
+    <Content Include="PopulationApi\__pycache__\serializers.cpython-310.pyc" />
+    <Content Include="PopulationApi\__pycache__\services.cpython-310.pyc" />
+    <Content Include="PopulationApi\__pycache__\views.cpython-310.pyc" />
+    <Content Include="PopulationApi\__pycache__\__init__.cpython-310.pyc" />
     <Content Include="Population\PopulationApi\templates\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="PopulationApi\" />
+    <Folder Include="PopulationApi\migrations\" />
+    <Folder Include="PopulationApi\migrations\__pycache__\" />
+    <Folder Include="PopulationApi\templates\" />
+    <Folder Include="PopulationApi\__pycache__\" />
     <Folder Include="Population\PopulationApi\" />
     <Folder Include="Population\PopulationApi\migrations\" />
     <Folder Include="Population\PopulationApi\templates\" />
